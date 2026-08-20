@@ -1,3 +1,19 @@
+## [2.12.0-ph1] - 2026-08-20
+
+### Added
+
+- **Health-journal prose style reference** (`references/health_journal_prose_style.md`) — writing conventions measured over a 69-paper, ~755,000-word corpus of published health and digital-health journal articles (JAMA/BMJ/Lancet/Nature Medicine/npj/JMIR/BMC families). Covers sentence and paragraph rhythm, how voice and hedging shift section by section, hedging that names its reason rather than boilerplate, numbers reported with recoverable denominators and intervals, connective frequencies, a calibration layer for the AI-term flag list, title and abstract conventions, the Discussion skeleton, the limitations paragraph and the conclusion's concession pivot.
+- **Reporting-style appraisal signals** (§13 of the same file) — the conventions read backwards as prompts for closer reading of a source. Explicitly bounded: evidence about reporting, never about study conduct, and never a scoring instrument.
+
+### Changed
+
+- `report_compiler_agent` — Writing Quality Check extended with the corpus-derived checks; Writing Style Guidelines gain a numbers-in-prose subsection and a pointer to the appraisal signals.
+- `synthesis_agent` — Step 5 Synthesis Narrative gains prose conventions (carry denominators and intervals through the synthesis; hedge with a named reason; `However` carries the contrast; claim-first paragraphs).
+- `source_verification_agent` — new Step 3a Reporting-Style Signals checklist, bounded to reporting quality.
+- `SKILL.md` — reference table and v2.4 feature list updated.
+
+---
+
 ## [2.9.1] - 2026-04-22
 
 ### Added

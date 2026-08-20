@@ -96,7 +96,9 @@ Combine all sections into a coherent document with:
 
 ## Writing Style Guidelines
 
-Reference: `references/academic_writing_style.md`
+References: `references/academic_writing_style.md` (general register);
+`references/health_journal_prose_style.md` (**corpus-derived conventions for
+health/medical/digital-health venues — governs for those manuscripts**).
 
 ### Tone & Voice
 - **Default**: Third person, formal academic register
@@ -104,6 +106,37 @@ Reference: `references/academic_writing_style.md`
 - **Hedging language** for uncertain claims: "suggests," "indicates," "may," "appears to"
 - **Strong language** for well-supported claims: "demonstrates," "establishes," "confirms"
 - **Register**: formal academic prose — use full forms ("do not" over "don't") and domain-precise vocabulary
+
+### Register shifts by section (health-science manuscripts)
+
+Published health prose does not hold one voice across the paper. Measured over
+the reference corpus (`references/health_journal_prose_style.md` §2), the same
+article shifts section by section — flattening this into a single "academic
+tone" is the most common way a draft reads as machine-written:
+
+| Section | Voice | Hedging |
+|---|---|---|
+| Methods | Procedural past tense; first person and agentless passive both heavy (passive ≈2:1) | Almost none; no "However" |
+| Results | Findings stated about the data, not the investigators (lowest first-person rate in the paper) | Lowest in the paper — a hedge here usually marks a claim that belongs in the Discussion |
+| Discussion | Interpretive, first person returns | Highest — over 5× the Results rate; this is where `may` and `However` belong |
+| Introduction | Impersonal, citation-dense | Moderate, about *potential* rather than about findings |
+
+Sentence rhythm targets: mean ≈20 words, median ≈17, with ~43% of sentences
+under 15 words. Paragraphs 3–6 sentences (median ≈75 words), claim first.
+
+### Hedging discipline
+
+Hedge by **naming the specific reason**, not with a portable formula. In the
+reference corpus, "further research is needed" appears 7 times and "should be
+interpreted with caution" 6 times in ~635,000 words of running prose — these
+are not how this literature hedges. Write "because the questions came from a single specialty
+board examination, the estimate may not transfer to open-ended clinical
+queries" instead. See `references/health_journal_prose_style.md` §3.
+
+**Boundary:** none of this may change a claim's strength. Tightening or
+loosening a claim to improve a sentence's rhythm is a claim-strength move
+governed by `shared/references/claim_strength_ladder.md`, and author-placed
+hedges are protected by `shared/references/protected_hedging_phrases.md`.
 
 ### Discipline-Specific Adjustments
 
@@ -114,7 +147,7 @@ Reference: `references/academic_writing_style.md`
 | Humanities | Argument-driven, close reading, interpretive |
 | Engineering | Problem-solution oriented, specification-precise |
 | Education | Practice-oriented, stakeholder-aware, impact-focused |
-| Medicine | Evidence hierarchy-conscious, clinical precision |
+| Medicine / Health | Evidence hierarchy-conscious, clinical precision; register shifts by section and numbers carry denominators + intervals — see `references/health_journal_prose_style.md` |
 | Business/Management | Problem-solution oriented, ROI/strategic-implication framing, practical recommendations |
 
 ### Paragraph Structure (TEEL)

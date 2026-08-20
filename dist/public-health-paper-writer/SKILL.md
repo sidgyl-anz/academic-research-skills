@@ -2,8 +2,8 @@
 name: public-health-paper-writer
 description: "Write PUBLIC HEALTH manuscripts (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics) with a 12-agent pipeline. Structures the paper against the applicable EQUATOR reporting guideline (STROBE, CONSORT, PRISMA, SPIRIT, TRIPOD, CHEERS, RECORD), keeps causal language calibrated to the study design, and produces a structured abstract, equity/ethics reporting, and clean citations. Modes: full, plan, outline, revision, revision-coach, abstract, lit-review, format-convert, citation-check, disclosure, rebuttal-audit. Triggers: write paper, write my public health paper, draft methods/results, structured abstract, epidemiology paper, guide my paper, revise my paper, parse reviews, AI disclosure, 寫論文, 公共衛生論文, 引導我寫論文, 논문 작성, 초록 작성, 논문 수정."
 metadata:
-  version: "3.2.0-ph1"
-  last_updated: "2026-08-12"
+  version: "3.3.0-ph1"
+  last_updated: "2026-08-20"
   status: active
   data_access_level: redacted
   task_type: open-ended
@@ -75,6 +75,7 @@ A general-purpose academic paper writing tool — 12-agent pipeline covering all
 **v2.5** adds two writing quality features:
 - **Style Calibration** (intake Step 10, optional) — Provide 3+ past papers and the pipeline learns your writing voice (sentence rhythm, vocabulary preferences, citation integration style). Applied as a soft guide during drafting; discipline conventions always take priority. See `shared/style_calibration_protocol.md`.
 - **Writing Quality Check** (`references/writing_quality_check.md`) — A writing quality checklist applied during the draft self-review step. Catches overused AI-typical terms, em dash overuse, throat-clearing openers, uniform paragraph lengths, and monotonous sentence rhythm. These are good writing rules, not detection evasion.
+- **Health Journal Prose Style** (`references/health_journal_prose_style.md`) — Corpus-derived conventions for health/medical/digital-health venues, measured over 69 published articles (~755,000 words): sentence rhythm, how voice and hedging shift section by section, how numbers are reported in prose, venue abstract header sets, the Discussion skeleton, and a calibration layer that stops the AI-term list from firing on ordinary usage such as "comprehensive". Governs over the general style guide for these manuscripts; the target journal's instructions govern over both.
 
 > **Routing discipline (v3.9.2):** see `.claude/CLAUDE.md` "Routing Discipline (v3.9.2)" + `shared/references/intent_clarification_protocol.md` for cross-skill routing rules. This skill assumes routing has already settled — ambiguous cross-phase materials should have been clarified upstream.
 
@@ -508,10 +509,13 @@ Explicit prohibitions to prevent common failure modes:
 
 | # | Anti-Pattern | Why It Fails | Correct Behavior |
 |---|-------------|-------------|-----------------|
-| 1 | **AI-typical overused terms** | "delve into", "crucial", "it is important to note" = instant AI detection | Use discipline-specific vocabulary; see `references/writing_quality_check.md` |
+| 1 | **AI-typical overused terms** | "delve into", "tapestry", "it is important to note" = instant AI detection | Use discipline-specific vocabulary; see `references/writing_quality_check.md`, calibrated against published usage in `references/health_journal_prose_style.md` §6 (`crucial`, `robust` and `comprehensive` are ordinary in health writing and must not be flagged on sight) |
 | 2 | **Em dash abuse** | More than 2 em dashes per page signals AI writing | Use parentheses, commas, or restructure the sentence |
 | 3 | **Throat-clearing openers** | "In this section, we will discuss..." adds no information | Start with the claim or finding directly |
-| 4 | **Uniform paragraph lengths** | Every paragraph is 4-5 sentences = monotonous AI rhythm | Vary paragraph length naturally (2-8 sentences) |
+| 4 | **Uniform paragraph lengths** | Every paragraph is 4-5 sentences = monotonous AI rhythm | Vary paragraph length naturally (2-8 sentences); published health prose runs a median 75-word paragraph and a median 17-word sentence with 43% under 15 words |
+| 4a | **One flat voice across the paper** | Real health-science articles shift register by section — Methods procedural and unhedged, Results stating findings about the data, Discussion carrying the hedges | Follow the section register table in `references/health_journal_prose_style.md` §2 |
+| 4b | **Boilerplate hedging** | "Further research is needed" / "should be interpreted with caution" appear ~7 times per 635,000 words of published health prose — they read as filler | Hedge by naming the specific feature of this study that creates the uncertainty, and the direction of the likely bias |
+| 4c | **Percentages without denominators** | "97% of cases" cannot be checked or compared | Report `n (%)` with the base recoverable, and attach the interval to every estimate |
 | 5 | **⚠️ IRON RULE: Fabricated citations** | Inventing plausible-sounding references that don't exist | Every citation must be verified via DOI or WebSearch; see `academic-pipeline/agents/integrity_verification_agent.md` |
 | 6 | **Sycophantic revision** | Accepting all reviewer feedback without critical evaluation | Use REVIEWER_DISAGREE status when reviewer is wrong; justify with evidence |
 | 7 | **Scope creep during revision** | Adding unrequested sections/analyses to "improve" the paper | Revision addresses reviewer concerns only; new content requires explicit user approval |

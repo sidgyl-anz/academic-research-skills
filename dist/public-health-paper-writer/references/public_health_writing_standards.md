@@ -118,6 +118,31 @@ both languages.
 
 ---
 
+## 5a. Prose conventions of the target literature
+
+Guideline adherence decides *what* each section must contain;
+`health_journal_prose_style.md` decides *how it reads*. Both apply. The
+corpus-measured essentials:
+
+- **Register shifts by section.** Methods is procedural and barely hedges;
+  Results states findings about the data with the paper's lowest first-person
+  rate; the Discussion carries the hedging (over 5× Results) and the
+  contrastive turns. Holding one flat "academic tone" across the paper is the
+  clearest marker of unpublishable prose.
+- **Hedge with a named reason**, not a portable formula — "further research is
+  needed" occurs 7 times in ~635,000 words of published health prose.
+- **Numbers carry their denominators.** `137 (99.3%)`, `911 (97%) of 935`; every
+  estimate travels with its interval; P-value and CI formatting follows the
+  venue and never varies within a manuscript.
+- **Discussion skeleton:** Principal Findings → Comparison With Prior Work →
+  Limitations → Future Directions → Conclusions, even where the venue does not
+  print the headings.
+- **Limitations name the direction of the bias**, not merely its existence.
+- **Conclusions use the concession pivot** — capability, `However`, constraint,
+  implication — and add no claim the Results do not carry.
+
+---
+
 ## 6. Terminology precision (write these correctly)
 
 incidence vs prevalence · rate vs risk vs odds · risk ratio vs odds ratio
@@ -137,7 +162,7 @@ aids interpretation.
 | `literature_strategist_agent` | §2 Introduction burden/gap; evidence hierarchy for PH |
 | `structure_architect_agent` | §1, §2, §4 (guideline-driven outline + structured abstract slots) |
 | `draft_writer_agent` | §2 Methods/Results conventions, §3 causal calibration, §5 ethics/integrity |
-| `abstract_bilingual_agent` | §4 structured abstract, §3 calibrated conclusion |
+| `abstract_bilingual_agent` | §4 structured abstract, §3 calibrated conclusion, §5a |
 | `citation_compliance_agent` | §5 registration/ethics/reporting-integrity statements |
 
 **Epistemic status:** curated writing aid, not an exhaustive registry.
