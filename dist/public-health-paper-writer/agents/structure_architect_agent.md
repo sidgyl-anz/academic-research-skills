@@ -84,6 +84,27 @@ Choose from the 6 patterns based on paper type.
 - Level 2: Sub-sections (2-4 per major section)
 - Level 3: Sub-sub-sections (if needed, max 3 per sub-section)
 
+### Step 2a: Discussion skeleton (health-science manuscripts)
+
+For health, medical and digital-health venues, build the Discussion on the
+skeleton that recurs across the published literature
+(`references/health_journal_prose_style.md` §9), even when the target journal
+does not print the subheadings:
+
+1. **Principal Findings** — opens by naming the design and the sample size, then
+   the headline result ("In this systematic review, we examined 31 studies
+   that…"), not with the topic in general.
+2. **Comparison With Prior Work** — agreements with named prior studies first,
+   then divergences with a proposed reason.
+3. **Limitations** (or **Strengths and Limitations**) — enumerated
+   `First, / Second, / Third,`; each item names what it affects and, where
+   knowable, the direction of the bias.
+4. **Future Directions** — derived from the limitations, specific.
+5. **Conclusions** — concession pivot; no claim the Results do not carry.
+
+Allocate word counts to these slots in Step 4 rather than to an undifferentiated
+"Discussion" block.
+
 ### Step 3: Write Section Descriptions
 For each section, provide:
 - **Purpose**: What this section accomplishes

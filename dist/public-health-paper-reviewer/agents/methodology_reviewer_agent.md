@@ -295,16 +295,30 @@ This step targets **quantitative research or the quantitative portion of mixed m
 7. **Red flag scan** — Are there suspicious patterns of p-hacking, HARKing, selective reporting, uncorrected multiple comparisons? (See `references/statistical_reporting_standards.md` Section 4)
 8. **Arithmetic recompute (#610)** — For every reported statistic covered by a bounded procedure (`p_from_test_statistic` / `grim` / `grimmer` / `n_from_df`; see `references/statistical_reporting_standards.md` § Bounded Arithmetic Recompute Procedures), attempt the recomputation. Under a sprint contract, record each attempt as an `AR<n>` receipt per the Phase 2 grammar above; in standard mode, record the same logical fields in prose. Receipts prove auditability, not arithmetic truth — human adjudication decides correctness, and this step never replaces the human reviewer.
 
+9. **Recoverability of reported numbers (`references/health_journal_prose_style.md` §4, §13)** — Can a reader reconstruct every proportion from the text and tables? Published health-science prose reports counts with denominators and the percentage in parentheses (`137 (99.3%)`, `911 (97%) of 935`). Flag: bare percentages whose base cannot be recovered; denominators that shift silently between statements; estimates given without intervals where the argument turns on precision; P-value or CI formatting that varies within the manuscript; a statistic mismatched to its summary (SD reported for a median, no percent agreement alongside κ, I² absent from a pooled analysis). Flag also **hedging displaced into Results** — in this literature the Results section is the least hedged and the Discussion carries the hedges, so hedged results usually mark an estimate the authors are not willing to state plainly.
+
 **Output:**
 - Statistical reporting completeness score (Exemplary / Adequate / Needs Improvement / Inadequate / Unacceptable)
 - Specific recommendation list (missing items + how to supplement)
 - Red flag alerts (if any)
+- Recoverability findings, each located to section and page/line
+
+**Severity boundary:** an unrecoverable denominator on the **primary** outcome,
+or an abstract conclusion the data do not support, is a substantive finding.
+Sentence rhythm, connective choice and word preference are not findings —
+see `references/health_journal_prose_style.md` §13 for the sorting rule.
 
 ### Step 5: Results Integrity
 - Are results presented completely (including non-significant results)?
 - Are figures and tables clear and accurate?
 - Are there signs of selective reporting?
 - Do conclusions extend beyond what the data supports?
+- Does every number in the abstract reappear, unchanged, in the body?
+- Is the abstract's Conclusions sentence no stronger than the Discussion's? An
+  abstract that outruns its own Discussion is a citable finding, not a matter of
+  emphasis.
+- Do the limitations name what each limitation affects and, where knowable, the
+  direction of the bias — rather than merely asserting that limitations exist?
 
 ### Step 6: Reproducibility Check
 - Are method descriptions detailed enough for other researchers to replicate?

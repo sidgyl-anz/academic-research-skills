@@ -2,8 +2,8 @@
 name: public-health-paper-reviewer
 description: "Multi-perspective peer review of PUBLIC HEALTH manuscripts (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics). Five independent reviewers (Journal-Fit + methodology + domain + cross-disciplinary + Devil's Advocate) check reporting-guideline adherence (STROBE, CONSORT, PRISMA, SPIRIT, TRIPOD, CHEERS, RECORD), causal-inference validity, and health-equity dimensions, then produce an Editorial Decision + Revision Roadmap. Full, re-review, quick, methodology-focus, guided, and calibration modes. Triggers on: review paper, peer review, manuscript review, referee report, review my public health paper, epidemiology review, STROBE/PRISMA/CONSORT check, critique paper, simulate review, calibrate reviewer, 審查論文, 論文審查, 同儕審查, 幫我審這篇, 公共衛生論文審查, 논문 심사, 동료 심사, 모의 심사."
 metadata:
-  version: "1.10.0-ph1"
-  last_updated: "2026-08-12"
+  version: "1.11.0-ph1"
+  last_updated: "2026-08-20"
   status: active
   data_access_level: verified_only
   task_type: open-ended
@@ -439,6 +439,7 @@ pointer; a changed target starts a new, explicitly non-comparable review id.
 | `references/editorial_decision_standards.md` | Accept/Minor/Major/Reject criteria and decision matrix | eic, editorial_synthesizer |
 | `references/statistical_reporting_standards.md` | Statistical reporting standards + APA 7.0 format quick reference + red flag list | methodology_reviewer |
 | `references/quality_rubrics.md` | Calibrated 0-100 scoring rubrics for 7 review dimensions with decision mapping | all reviewers |
+| `references/health_journal_prose_style.md` | Corpus-derived prose conventions of health-science journals (rhythm, register by section, hedging, numbers in prose, title/abstract conventions, Discussion skeleton); the substantive-vs-stylistic sorting rule for presentation findings; and the register of the review report itself | all reviewers; editorial_synthesizer for the severity boundary |
 | `references/review_quality_thinking.md` | Cognitive framework for review quality: three lenses (internal validity, external validity, contribution), common reviewer traps, calibration questions | all reviewers |
 | `references/re_review_mode_protocol.md` | Full re-review verification logic (three-gate contract), R&R traceability output format, Socratic guidance after re-review | orchestrating layer; routed-seat Phase 1/2A calls; Phase 2B integration call |
 | `references/guided_mode_protocol.md` | Guided mode dialogue flow, progressive revelation sequence, dialogue rules | all reviewers |

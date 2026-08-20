@@ -52,12 +52,31 @@ If a flagged term is **standard terminology in the target discipline**, it is ex
 - "robust" in statistics ("robust estimator") → OK
 - "navigate" in wayfinding research (literal) → OK
 
+### Calibration against published health-science prose
+
+For health, medical and digital-health manuscripts, `health_journal_prose_style.md`
+§6 measures how often each flagged term actually occurs in published articles
+(69 papers; rates computed on the ~635,000-word running-prose subset). Use it to avoid false positives:
+
+| Band | Terms | Action |
+|---|---|---|
+| Absent to effectively absent (0–1.3 per 100k words) | tapestry, testament, embark, groundbreaking, synergy, showcase, intricate, cornerstone, delve, realm, pivotal, cutting-edge | Treat as effectively banned |
+| Rare (1.9–4.7 per 100k) | streamline, navigate, multifaceted, foster, leverage, nuanced | Justify each use |
+| Occasional (5–12 per 100k) | holistic, paradigm, underscore, landscape | Acceptable; a plainer word is often better |
+| **Ordinary and frequent (13–50 per 100k)** | **crucial, robust, comprehensive** | **Do not flag on sight** — these are normal usage in this literature |
+
+What marks AI-generated prose is **clustering**, not any single word: several
+mid-band terms in one paragraph, or the same intensifier recurring across
+sections. Flagging "we performed a comprehensive search" is a false positive
+against the published record.
+
 ---
 
 ## B. Punctuation Pattern Control
 
 ### Em Dash (—)
 - **Limit**: ≤ 3 per paper total, recommend 0-1
+- **Corpus check**: published health-science articles use em dashes at ~0.53 per 1,000 words — roughly **one per 1,900 words**, i.e. one or two in a whole Results section and often none (`health_journal_prose_style.md` §6)
 - **Why**: AI text overuses em dashes for parenthetical asides. Academic writing typically uses commas, parentheses, or separate sentences instead
 - **Fix**: Replace with commas, parentheses, or restructure into separate sentences
 - **Exception**: Direct quotes from sources retain their original punctuation
@@ -145,6 +164,13 @@ If 5+ consecutive sentences all fall within a narrow word-count range (e.g., all
 - Insert a short sentence (≤ 10 words) to break the pattern
 - Combine two short sentences into one complex one if the pattern is monotonously short
 - Read the paragraph aloud — if it feels metronomic, vary it
+
+### Measured Baseline (health-science corpus)
+
+Mean sentence length **19.9 words**, median **17**, SD **13.8**; 43% of
+sentences under 15 words, 12% at 35+. The distribution is wide and
+right-skewed — short declaratives carry findings, long sentences carry
+qualification. See `health_journal_prose_style.md` §1.
 
 ### Burstiness Targets (by section)
 - **Abstract**: Moderate variation (factual, steady pace)

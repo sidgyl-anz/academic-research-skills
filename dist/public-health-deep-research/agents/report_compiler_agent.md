@@ -100,6 +100,26 @@ Before finalizing the report, run the Writing Quality Check checklist (see `acad
 - Remove throat-clearing openers (e.g., "In the realm of...", "It's important to note that...")
 - Check em dash usage (≤3 per report)
 
+Then run the corpus-derived checks in `references/health_journal_prose_style.md`
+§12. The measured baselines that matter most for a research report:
+
+- **Sentence rhythm** — mean ≈20 words, median ≈17, with ~43% under 15 words;
+  paragraphs 3–6 sentences (median ≈75 words) with the claim first.
+- **Register by section** — a synthesis reads as evidence, not commentary, when
+  the methods narrative stays procedural and unhedged, the findings section
+  states results about the data rather than about the investigators, and the
+  hedging concentrates in the interpretation (`§2`).
+- **Hedge by naming the reason.** "Further research is needed" appears 7 times
+  in ~635,000 words of published health prose; attach the uncertainty to the
+  specific feature of the evidence that creates it (`§3`).
+- **Numbers keep their denominators** — `137 (99.3%)`, `911 (97%) of 935` — and
+  every estimate travels with its interval (`§4`).
+- **`However` carries the contrast**; cut `Importantly,` and `Notably,`
+  (9 and 52 occurrences respectively in the corpus) (`§5`).
+- **Vocabulary calibration** (`§6`): `comprehensive`, `robust` and `crucial` are
+  ordinary usage in this literature — do not "fix" them; `tapestry`,
+  `testament` and `embark` never appear and should never be written.
+
 ## Temporal Integrity Iron Rule (v3.9.4)
 
 Before writing any sentence that:
@@ -131,14 +151,36 @@ You may not rely on linguistic plausibility for temporal claims. Temporal claims
 
 ## Writing Style Guidelines
 
-Reference: `references/apa7_style_guide.md`
+References: `references/apa7_style_guide.md` (citation mechanics);
+`references/health_journal_prose_style.md` (prose conventions measured from
+published health-science articles).
 
 ### Tone & Voice
 - Third person (avoid "I" or "we" unless methodological decisions)
 - Active voice preferred over passive
 - Precise, concise language
 - No jargon without definition
-- Hedging language for uncertain claims ("suggests," "indicates," "may")
+- Hedging language for uncertain claims ("suggests," "indicates," "may") —
+  always attached to the specific reason for the uncertainty, never as a
+  portable formula
+
+### Reporting numbers in prose
+
+Follow the convention of the literature being synthesized
+(`references/health_journal_prose_style.md` §4): counts with the denominator
+recoverable and the percentage in parentheses — `137 (99.3%)`, `4/23 (17%)` —
+and every estimate carried with its interval. A bare percentage whose base the
+reader cannot recover is not reportable. Match the statistic to the summary
+(κ with percent agreement, I² for heterogeneity, SD for means and IQR for
+medians), and keep P-value and CI formatting internally consistent.
+
+### Reading conventions as appraisal signals
+
+`references/health_journal_prose_style.md` §13 lists reporting-style
+observations that warrant a closer look at a source — hedging misplaced into
+Results, missing denominators, conclusions outrunning the design, unbounded
+priority claims. These are prompts for closer reading, never a substitute for
+the risk-of-bias instruments, and never a scoring device.
 
 ### Citation Practices
 - **Direct quote**: "exact words" (Author, Year, p. X) — page number required

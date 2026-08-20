@@ -2,8 +2,8 @@
 name: public-health-deep-research
 description: "Universal deep-research team tuned for PUBLIC HEALTH (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics). 13-agent pipeline: PICO/PECO question framing, systematic literature search, source verification against real records, cross-source synthesis with causal-vs-association calibration, risk-of-bias appraisal (RoB2/ROBINS-I/Newcastle-Ottawa/QUADAS-2), meta-analysis, GRADE certainty, and PRISMA-ready systematic reviews. Modes: full research, quick brief, paper review, lit-review, fact-check, three-way scan, Socratic guided, systematic review + meta-analysis. Triggers on: research, deep research, public health research, literature review, systematic review, meta-analysis, PRISMA, evidence synthesis, fact-check a health claim, guide my research, 研究, 深度研究, 文獻回顧, 系統性回顧, 後設分析, 事實查核, 引導我的研究, 심층 연구, 문헌 조사, 체계적 문헌고찰, 메타분석."
 metadata:
-  version: "2.11.0-ph1"
-  last_updated: "2026-08-12"
+  version: "2.12.0-ph1"
+  last_updated: "2026-08-20"
   status: active
   data_access_level: raw
   task_type: open-ended
@@ -77,6 +77,7 @@ instructions here. Specifically:
 **v2.4** adds writing quality improvements to the report compiler:
 - **Style Profile consumption** (optional) — If a Style Profile is available from academic-paper intake, the report compiler applies it as a soft guide for the Executive Summary and Synthesis sections. Discipline conventions and report objectivity take priority.
 - **Writing Quality Check** — The report compiler runs a writing quality checklist before finalizing: flags AI-typical overused terms, checks sentence/paragraph length variation, removes throat-clearing openers. See `academic-paper/references/writing_quality_check.md`.
+- **Health Journal Prose Style** (`references/health_journal_prose_style.md`) — Prose conventions measured over 69 published health and digital-health articles (~755,000 words): sentence and paragraph rhythm, how voice and hedging shift section by section, how numbers are reported in prose, and the same conventions read backwards as appraisal signals when judging a source's reporting quality. Used by the report compiler, synthesis and source-verification agents.
 
 > **Routing discipline (v3.9.2):** see `.claude/CLAUDE.md` "Routing Discipline (v3.9.2)" + `shared/references/intent_clarification_protocol.md` for cross-skill routing rules. This skill assumes routing has already settled — ambiguous cross-phase materials should have been clarified upstream.
 
@@ -511,6 +512,7 @@ See `academic-pipeline/SKILL.md` for the complete workflow.
 | `references/equator_reporting_guidelines.md` | EQUATOR reporting guidelines by study design (STROBE/CONSORT/PRISMA/etc.) | research_architect, risk_of_bias, report_compiler |
 | `references/apa7_style_guide.md` | APA 7th edition quick reference | report_compiler, editor_in_chief |
 | `references/source_quality_hierarchy.md` | Evidence pyramid + grading rubric | source_verification, bibliography |
+| `references/health_journal_prose_style.md` | Corpus-derived prose conventions of health-science journals (rhythm, register by section, hedging, numbers in prose, abstract header sets, Discussion skeleton) + reporting-style appraisal signals | report_compiler, synthesis, source_verification, risk_of_bias, meta_analysis, devils_advocate |
 | `references/methodology_patterns.md` | Research design templates | research_architect |
 | `references/logical_fallacies.md` | 30+ fallacies catalog | devils_advocate |
 | `references/ethics_checklist.md` | AI disclosure, attribution, dual-use | ethics_review |

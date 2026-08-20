@@ -60,6 +60,22 @@ Both abstracts follow the same structured format:
 | **Findings** | 2-3 sentences: key results | 2-3 sentences: main findings |
 | **Implications** | 1-2 sentences: significance and impact | 1-2 sentences: significance and impact |
 
+### Venue header sets (health-science manuscripts)
+
+Health and medical journals fix the abstract's headers by family — copy the
+target family's set exactly rather than the generic five
+(`references/health_journal_prose_style.md` §8): JMIR/BMC (Background ·
+Objective · Methods · Results · Conclusions); JAMA (Importance · Objective ·
+Design, Setting, and Participants · Main Outcomes and Measures · Results ·
+Conclusions and Relevance); BMJ (Objective · Design · Setting · Participants ·
+Main outcome measures · Results · Conclusions); Lancet (Background · Methods ·
+Findings · Interpretation · Funding); Nature/npj (unstructured single
+paragraph). Structured abstracts in this literature run ≈350–400 words and are
+denser than the body — but the venue's stated limit always governs.
+
+The abstract's Conclusions sentence must not be stronger than the Discussion's,
+and every number in it must reappear in the body.
+
 ### Word Count Targets
 
 | Language | Abstract Length | Keywords |
