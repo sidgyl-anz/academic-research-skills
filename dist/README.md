@@ -1,7 +1,13 @@
 # Public Health Skills — bundle for Claude.ai
 
-This bundle contains **three standalone, public-health-tuned Claude Skills**,
-each as its own ready-to-upload `.zip`:
+These are **three standalone, public-health-tuned Claude Skills**, each as its
+own ready-to-upload `.zip`:
+
+> **Note on "install all at once":** Claude.ai's skill uploader takes **one
+> skill per `.zip`** and **rejects a zip that contains other zips** ("Zip cannot
+> contain nested zip files"). So there is no single-archive install — upload the
+> three zips below individually. Each is already in the correct format (the skill
+> folder with its `SKILL.md` at the root).
 
 | Order | Zip | Skill | Use it to |
 |---|---|---|---|
@@ -11,15 +17,14 @@ each as its own ready-to-upload `.zip`:
 
 ## Install (one skill per upload)
 
-Claude.ai's skill uploader takes **one skill per `.zip`**, so you upload the
-three inner zips individually — this bundle just packages them into a single
-download. You do **not** need to unzip the inner zips; upload each `.zip` as-is.
-
-1. Unzip this bundle → you get the three `.zip` files above + this README.
-2. In Claude.ai go to **Settings → Capabilities → Skills** (Skills must be
+1. In Claude.ai go to **Settings → Capabilities → Skills** (Skills must be
    enabled; on Team/Enterprise an admin may need to turn them on).
-3. **Upload skill** → select `public-health-deep-research.zip`. Repeat for the
-   writer and reviewer zips. All three coexist.
+2. **Upload skill** → select `public-health-deep-research.zip`.
+3. Repeat **Upload skill** for `public-health-paper-writer.zip` and
+   `public-health-paper-reviewer.zip`. All three coexist.
+
+Upload each `.zip` as-is — do not unzip it and do not combine them into one
+archive (the uploader rejects nested zips).
 
 ## Activating them (no slash commands on the web app)
 
@@ -46,6 +51,22 @@ message. The three chain as a pipeline: **research → write → review → revi
 - **Skills are not fine-tuned on uploaded data.** Nothing to "train" — attach
   your materials per task. Each skill's `INSTALL.md` explains the optional
   Style-Calibration / exemplar / calibration-test-set paths.
+
+## Rebuilding these zips
+
+From the repository root, after editing any skill folder under `dist/`:
+
+```bash
+./build-skills.sh                 # rebuild all three skill zips (upload these)
+./build-skills.sh writer          # just one (deep-research | writer | reviewer)
+./build-skills.sh --bundle        # also build the combined bundle (NOT uploadable — see note above)
+```
+
+The script validates that each folder has a `SKILL.md`, excludes junk
+(`.DS_Store` / `__pycache__`), and packs each skill folder at the zip's top
+level (the layout Claude.ai expects). It uses `zip` when available and falls
+back to Python's `zipfile`, so it works on minimal images and Git Bash. The
+combined bundle is opt-in because Claude.ai rejects a zip containing other zips.
 
 ## Provenance & license
 

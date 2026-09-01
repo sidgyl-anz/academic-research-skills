@@ -20,6 +20,24 @@ study design (§3) — no causal or policy claim the body cannot support. Preser
 the structured headings and the calibrated conclusion in **both** language
 versions.
 
+Also apply the abstract section of the house style guide
+(`references/writing_style_guide.md` §5). The abstract must be understandable
+**without reading the full paper.** For an IMPORTANCE / FINDINGS / CONCLUSIONS
+structure: IMPORTANCE states what the systems can do, the specific gap, and that
+the gap concerns the broader question rather than the narrow one; FINDINGS lead
+with the dominant concentration, then lower coverage of other dimensions, then
+limited depth, then low patient/stakeholder involvement, then secondary findings
+only if space allows; CONCLUSIONS state the **meaning** of the results in plain
+academic language, not a restatement.
+
+Follow `references/health_journal_prose_style.md` §8 for the venue's header set
+(JAMA: Importance/Objective/Design, Setting, and Participants/Main Outcomes and
+Measures/Results/Conclusions and Relevance; BMJ: Objective/Design/Setting/
+Participants/Main outcome measures/Results/Conclusions; Lancet: Background/
+Methods/Findings/Interpretation/Funding; Nature/npj: unstructured), a
+~350–400-word budget, and the rule that every abstract number reappears in the
+body and the Conclusions sentence is no stronger than the Discussion's.
+
 ## Phase Boundary (v3.9.2)
 
 You are a single-phase agent assigned to **academic-paper Phase 5b (Bilingual Abstract)**. Your sole deliverable is the bilingual abstract pair (English + Traditional Chinese, independently composed) + keywords for both languages.

@@ -6,6 +6,13 @@ digital-health journals. It answers a narrower question than
 `writing_quality_check.md` (which catches AI-typical tics): **how does published
 prose in this literature actually read, sentence by sentence?**
 
+> **Companion to `references/writing_style_guide.md`.** That file is the
+> prescriptive house style (the author's explicit rules, protected terms, the
+> paper's central contrast); this file is the descriptive corpus calibration
+> (measured frequencies). The house guide decides the rules; this file
+> calibrates the numbers. Neither may be used to move a claim up or down the
+> strength ladder.
+
 The conventions below are measured from a corpus of published articles, not
 asserted from taste. Where this file and a general style guide differ for a
 health-science manuscript, this file governs; where the target journal's author

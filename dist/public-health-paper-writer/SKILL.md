@@ -1,9 +1,9 @@
 ---
 name: public-health-paper-writer
-description: "Write PUBLIC HEALTH manuscripts (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics) with a 12-agent pipeline. Structures the paper against the applicable EQUATOR reporting guideline (STROBE, CONSORT, PRISMA, SPIRIT, TRIPOD, CHEERS, RECORD), keeps causal language calibrated to the study design, and produces a structured abstract, equity/ethics reporting, and clean citations. Modes: full, plan, outline, revision, revision-coach, abstract, lit-review, format-convert, citation-check, disclosure, rebuttal-audit. Triggers: write paper, write my public health paper, draft methods/results, structured abstract, epidemiology paper, guide my paper, revise my paper, parse reviews, AI disclosure, 寫論文, 公共衛生論文, 引導我寫論文, 논문 작성, 초록 작성, 논문 수정."
+description: "Write PUBLIC HEALTH manuscripts (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics) with a 12-agent pipeline. Structures the paper against the applicable EQUATOR reporting guideline (STROBE, CONSORT, PRISMA, SPIRIT, TRIPOD, CHEERS, RECORD), keeps causal language calibrated to the study design, and produces a structured abstract, equity/ethics reporting, and clean citations. Applies a house writing style by default (clarity, plain-academic wording, preserved numbers/terminology), with a dedicated style-polish copyedit mode. Modes: full, plan, outline, revision, revision-coach, abstract, lit-review, format-convert, citation-check, disclosure, rebuttal-audit, style-polish. Triggers: write paper, write my public health paper, draft methods/results, structured abstract, guide my paper, revise my paper, polish for clarity, copyedit to the style guide, 寫論文, 公共衛生論文, 논문 작성."
 metadata:
-  version: "3.3.0-ph1"
-  last_updated: "2026-08-20"
+  version: "3.3.0-ph2"
+  last_updated: "2026-08-12"
   status: active
   data_access_level: redacted
   task_type: open-ended
@@ -75,7 +75,8 @@ A general-purpose academic paper writing tool — 12-agent pipeline covering all
 **v2.5** adds two writing quality features:
 - **Style Calibration** (intake Step 10, optional) — Provide 3+ past papers and the pipeline learns your writing voice (sentence rhythm, vocabulary preferences, citation integration style). Applied as a soft guide during drafting; discipline conventions always take priority. See `shared/style_calibration_protocol.md`.
 - **Writing Quality Check** (`references/writing_quality_check.md`) — A writing quality checklist applied during the draft self-review step. Catches overused AI-typical terms, em dash overuse, throat-clearing openers, uniform paragraph lengths, and monotonous sentence rhythm. These are good writing rules, not detection evasion.
-- **Health Journal Prose Style** (`references/health_journal_prose_style.md`) — Corpus-derived conventions for health/medical/digital-health venues, measured over 69 published articles (~755,000 words): sentence rhythm, how voice and hedging shift section by section, how numbers are reported in prose, venue abstract header sets, the Discussion skeleton, and a calibration layer that stops the AI-term list from firing on ordinary usage such as "comprehensive". Governs over the general style guide for these manuscripts; the target journal's instructions govern over both.
+- **House Writing Style (this build)** (`references/writing_style_guide.md`) — A unified style guide applied **by default** during drafting and revision: one idea per sentence, direct plain-academic wording, an explicit central contrast for the first-time reader, preserved methodological distinctions and exact numbers, and section rules for Results/Discussion/Abstract. Also available as the standalone `style-polish` mode (wording-only copyedit). See the Operational Modes table.
+- **Corpus Prose Calibration (this build)** (`references/health_journal_prose_style.md`) — Writing conventions measured from ~69 full-text top-journal health articles (JAMA/BMJ/Lancet/Nature Medicine/npj/JMIR): sentence rhythm (~17–20-word median), register by section, how the literature actually hedges (name the reason), `n (%)` numbers with recoverable denominators, `However` over `Importantly,`/`Notably,`, structured-abstract header sets, and Discussion architecture. Calibrates the house style against the published record; frequencies are guidance, not targets.
 
 > **Routing discipline (v3.9.2):** see `.claude/CLAUDE.md` "Routing Discipline (v3.9.2)" + `shared/references/intent_clarification_protocol.md` for cross-skill routing rules. This skill assumes routing has already settled — ambiguous cross-phase materials should have been clarified upstream.
 
@@ -343,7 +344,7 @@ The v3.6.3 `ARS_PASSPORT_RESET=1` `reset_boundary[]` mechanism (per `academic-pi
 - **No cross-session resume mid-round**: the four-phase generator-evaluator round is an in-session atomic unit. Manual session split mid-round loses the writer Phase 4a artefact and forces restart from Phase 0. v3.6.7+ may introduce a `pre_commitment_history[]` ledger entry in Schema 9 to persist the writer Phase 4a artefact across session boundaries; v3.6.6 does not implement.
 - **In-pair Phase 6 evaluator vs `academic-paper-reviewer` external review**: the in-pair `peer_reviewer_agent` (Phase 6 evaluator with the v3.6.6 contract gate) and the standalone `academic-paper-reviewer` skill (Stage 3 5-panel external editorial review) serve different review layers and remain documented as known technical debt per design doc §1 known limitations. Routing / merge decisions are deferred to v3.7.x.
 
-## Operational Modes (11 Modes)
+## Operational Modes (12 Modes)
 
 See `references/mode_selection_guide.md` for details.
 
@@ -360,6 +361,7 @@ See `references/mode_selection_guide.md` for details.
 | `revision-coach` | "parse reviews" / "revision roadmap" / "I got reviewer comments" / "should we push back" / "conference rebuttal" / "grant panel response" / explicitly identified real committee correspondence | 12 only | Peer-review path: immutable Roadmap core + explicit author sidecar + optional Tracking Template/Response Skeleton. Committee path: separate #668 concern tracker + placeholder response skeleton; no Schema 11, reviewer obligation/severity, or determination. |
 | **`disclosure`** (v3.2) | **"AI disclosure for Nature" / "generate AI usage statement"** | **9 only** | **Default venue path: `REQUIRED` / `ACTION_ONLY` / `NOT_REQUIRED` / `UNKNOWN` applicability plus typed halt status; policy-anchor path: anchor-specific render** |
 | **`rebuttal-audit`** | **"audit my response" / "check my rebuttal" / "did I miss any reviewer comment"** (requires BOTH reviewer comments AND an existing rebuttal draft) | **12 only (parse-only)** | **Rebuttal QA report: per-comment coverage + gaps + risk flags. No new response generated; advisory only. Does NOT emit Schema 11 / Material Passport / verified status.** |
+| **`style-polish`** | **"polish this to the house style" / "copyedit for clarity" / "apply the writing style guide" / "revise the wording, keep the science"** | **5 only (style pass)** | **Draft revised to the house writing style (`references/writing_style_guide.md`) — wording/clarity only. Preserves meaning, terminology, numbers, CIs/ORs/P-q values, and methodological distinctions exactly; changes no content. Output: style-revised draft + a short summary of what changed and why. Advisory copyedit; does NOT emit Schema 11 / verified status.** |
 
 **Disclosure dispatch contract:** when mode=`disclosure`, agent 9 takes its standalone branch and MUST load `references/disclosure_mode_protocol.md` before producing text. It does not run normal Phase 7 formatting or substitute the generic full-pipeline AI statement; the protocol selects the venue database or policy-anchor path and owns all halt/render decisions.
 
@@ -484,6 +486,9 @@ See `agents/intake_agent.md` for the complete field definitions of the Phase 0 c
 **Agent definitions**: `agents/{agent_name}.md` — one file per agent (12 total, matching Agent Team table above).
 
 **References** (in `references/`):
+- **House writing style (applied by default): `writing_style_guide`** — unified clarity/word-choice/section guidelines. One idea per sentence, direct wording, the "looked at" ban, protected technical terms, intensifier/vague-phrase avoid-lists, explicit central contrast, preserved methodological distinctions, and Results/Discussion/Abstract rules. Applied by `draft_writer_agent` (drafting + self-review), in `revision`, and as the whole of `style-polish` mode. Changes wording, never the science.
+- **Corpus prose calibration: `health_journal_prose_style`** — descriptive writing conventions measured from ~69 full-text JAMA / BMJ / Lancet / Nature-Medicine / npj / JMIR articles (sentence rhythm, register by section, hedging, connectives, numbers-in-prose, titles, abstracts, Discussion architecture, a pre-handoff self-check). Companion to `writing_style_guide` — the guide sets the rules, this file calibrates the frequencies. Frequencies are calibration for judgment, never quotas.
+- **Real example sentences: `health_journal_prose_examples`** — short, attributed sentences quoted from JAMA / BMJ / Lancet Digital Health / Nature / Nature Medicine / npj / World Psychiatry articles, organized by IMRaD section (Abstract, Introduction, Methods, Results, Conclusions, Recommendations) plus a sentence-craft appendix with a "why it works" note and a weak→strong worked rewrite. Imitate the **structure**, never the content — these are other authors' sentences.
 - **Public health (this build's default): `public_health_writing_standards`** — EQUATOR reporting guidelines by design (STROBE/CONSORT/PRISMA/SPIRIT/STARD/TRIPOD/CHEERS/RECORD) driving the outline, IMRaD public-health flavor, causal-language calibration, structured abstract, equity/ethics/reporting-integrity, terminology precision. Loaded by all writing agents on PH manuscripts.
 - Citation: `apa7_extended_guide`, `apa7_chinese_citation_guide`, `citation_format_switcher`
 - Writing: `academic_writing_style`, `writing_quality_check`, `writing_judgment_framework`
@@ -515,7 +520,7 @@ Explicit prohibitions to prevent common failure modes:
 | 4 | **Uniform paragraph lengths** | Every paragraph is 4-5 sentences = monotonous AI rhythm | Vary paragraph length naturally (2-8 sentences); published health prose runs a median 75-word paragraph and a median 17-word sentence with 43% under 15 words |
 | 4a | **One flat voice across the paper** | Real health-science articles shift register by section — Methods procedural and unhedged, Results stating findings about the data, Discussion carrying the hedges | Follow the section register table in `references/health_journal_prose_style.md` §2 |
 | 4b | **Boilerplate hedging** | "Further research is needed" / "should be interpreted with caution" appear ~7 times per 635,000 words of published health prose — they read as filler | Hedge by naming the specific feature of this study that creates the uncertainty, and the direction of the likely bias |
-| 4c | **Percentages without denominators** | "97% of cases" cannot be checked or compared | Report `n (%)` with the base recoverable, and attach the interval to every estimate |
+| 4c | **Percentages without denominators** | "97% of cases" cannot be checked or compared | Report `n (%)` with the base recoverable, and attach the interval to every estimate; real sentence models in `references/health_journal_prose_examples.md` §4 |
 | 5 | **⚠️ IRON RULE: Fabricated citations** | Inventing plausible-sounding references that don't exist | Every citation must be verified via DOI or WebSearch; see `academic-pipeline/agents/integrity_verification_agent.md` |
 | 6 | **Sycophantic revision** | Accepting all reviewer feedback without critical evaluation | Use REVIEWER_DISAGREE status when reviewer is wrong; justify with evidence |
 | 7 | **Scope creep during revision** | Adding unrequested sections/analyses to "improve" the paper | Revision addresses reviewer concerns only; new content requires explicit user approval |
@@ -590,7 +595,7 @@ When `ARS_MODEL_TIERING` is set, the dispatching session routes this skill's age
 
 | Item | Content |
 |------|---------|
-| Skill Version | 3.2.0 |
+| Skill Version | 3.3.0-ph2 |
 | Last Updated | 2026-07-11 |
 | Maintainer | Cheng-I Wu |
 | Dependent Skills | deep-research v1.0+ (upstream), academic-paper-reviewer v1.0+ (downstream) |
