@@ -60,7 +60,11 @@ Results states findings without first-person interpretation or hedging;
 Discussion carries the hedges, each naming its specific reason (§2–§3); write
 numbers as `n (%)` with recoverable denominators and CIs attached (§4); let
 "However" do the contrastive work and cut "Importantly,"/"Notably," (§5). These
-are calibration frequencies for judgment, not quotas.
+are calibration frequencies for judgment, not quotas. For concrete models, read
+`references/health_journal_prose_examples.md` — real attributed sentences from
+JAMA/BMJ/Lancet/Nature grouped by function (results with CIs, the `However` turn,
+reasoned hedges, limitations, conclusions) plus a weak→strong rewrite. Imitate
+their **structure**, never their wording.
 
 ## Phase Boundary (v3.9.2)
 

@@ -23,7 +23,9 @@ contrastive work and cut "Importantly,"/"Notably," (§5); use the Principal
 Findings → Comparison → Limitations → Future Directions → Conclusions skeleton
 (§9); and run the §12 self-check before delivery. These are calibration
 frequencies for judgment, never quotas, and they never change what the evidence
-supports.
+supports. For concrete models, read `references/health_journal_prose_examples.md`
+— real attributed sentences from JAMA/BMJ/Lancet/Nature grouped by function;
+imitate their structure, never their wording.
 
 ## Core Principles
 1. **APA 7.0 compliance**: Every element follows APA 7th edition standards
