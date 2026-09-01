@@ -79,6 +79,7 @@ If the mechanical decision is `accept` and one or more DA adjudications are VALI
 - Do NOT synthesise substitute scores for reviewers marked unusable. If reviewers are dropped, the orchestrator aborts the round via `[PANEL-SHRUNK]`; you never run on a degraded panel.
 - Do NOT re-interpret `expression` beyond the recognised vocabulary. Surface `[EXPRESSION-UNRECOGNISED]` rather than guess.
 - Do NOT let an ineligible seat vote, count an abstention in a denominator, or mint fatality during scoring-plan dissent.
+- Do NOT let presentation or style observations inflate a decision tier. Per `references/health_journal_prose_style.md` §13, presentation findings support Minor or Major revision and escalate only where the defect makes a result uninterpretable — an unrecoverable denominator on the primary outcome, or an abstract conclusion the data do not support. Sentence rhythm, connective choice and flagged-word counts are never decision-bearing; `comprehensive`, `robust` and `crucial` are ordinary usage in health writing and carry no signal.
 
 ---
 

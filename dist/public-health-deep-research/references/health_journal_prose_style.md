@@ -1,21 +1,23 @@
 # Health Journal Prose Style — Corpus-Derived Writing Conventions
 
-Style reference for writing research reports and evidence syntheses in the
-register of the health, medical and digital-health literature: **how does
-published prose in this field actually read, sentence by sentence?** In this
-research skill it guides how the report compiler and synthesis write — the
-Executive Summary, synthesis narrative, and any PRISMA-style systematic-review
-report — so the output reads like the corpus it draws on rather than generic
-"academic tone".
+Style reference for the prose this skill produces: research reports, evidence
+syntheses, systematic-review write-ups, executive summaries and fact-check
+briefs in health and digital health.
 
-The conventions below are measured from a corpus of published articles, not
-asserted from taste. Where this file and a general style guide differ for a
-health-science manuscript, this file governs; where the target journal's author
-instructions differ from either, the journal governs.
+Two uses:
 
-This is a writing aid. It shapes how the author's study is *expressed* — it
-never changes what the study found, and it never strengthens a claim to make a
-sentence land better.
+1. **Writing.** Research reports read best when they follow the conventions of
+   the literature they summarize. The register measured below — hedging that
+   names its reason, findings stated with denominators, sections that shift
+   voice — is what makes a synthesis read as evidence rather than as commentary.
+2. **Reading.** The same conventions are diagnostic. A source whose Results
+   section hedges heavily, whose percentages have no recoverable denominators,
+   or whose conclusions outrun its design, is telling you something about its
+   reliability before you appraise its methods.
+
+Conventions below are measured from published articles, not asserted from taste.
+This file complements the general register guidance the report compiler already
+applies; a target venue's author instructions always govern over both.
 ---
 
 ## 0. Where these conventions come from
@@ -351,28 +353,39 @@ Rules:
 
 ---
 
-## 13. How the research agents use this file
+## 13. Reading the corpus conventions as appraisal signals
+
+The same measurements support source appraisal. None is decisive alone; each is
+a prompt to look closer.
+
+| Observation in a source | What to check |
+|---|---|
+| Hedging concentrated in Results rather than Discussion | Findings may be weaker than the abstract implies — read the actual estimates |
+| Percentages without recoverable denominators | Selective reporting, or a very small base |
+| Estimates reported without intervals | Precision may be poor enough that the point estimate misleads |
+| Conclusions stronger than the Discussion, or than the design supports | Over-claim; record the calibrated version, not the abstract's |
+| Unbounded priority claims ("the first study to…") | In this literature, priority is normally bounded to the search and its date |
+| Generic limitations only ("sample size was small") | The specific threats to validity may not have been considered |
+| Mixed P-value / CI formatting within one paper | Weak internal editing; check the numbers themselves more carefully |
+
+---
+
+## 14. How this reference is used by each agent
 
 | Agent | Primary sections |
 |---|---|
-| `report_compiler_agent` | §1 rhythm, §2 register by section, §3 hedging (name the reason), §4 numbers in prose (`n (%)`, denominators, CIs), §5 connectives, §11 conclusions, §12 self-check before delivery |
-| `synthesis_agent` | §2–§3 (state findings about the evidence, hedge in the synthesis with the specific reason), §9 for a systematic-review narrative |
-| `research_question_agent` | §7 title conventions when proposing a working title |
-| `editor_in_chief_agent` | §12 self-check as the presentation-quality screen; §6 to avoid mis-flagging ordinary field usage |
-| `devils_advocate_agent` | §3, §11 — flag a conclusion or causal verb the evidence does not carry |
+| `report_compiler_agent` | §1 rhythm, §2 register by section, §3 hedging, §4 numbers in prose, §5 connectives, §9–§11 for report Discussion/Conclusions, §12 self-check |
+| `synthesis_agent` | §3 (hedge with a named reason), §4 (carry denominators and intervals through the synthesis), §13 |
+| `source_verification_agent` / `bibliography_agent` | §13 appraisal signals; §4 (does the source report what it claims to report?) |
+| `risk_of_bias_agent` | §13 (reporting-quality signals feed, but never substitute for, the instrument's domains) |
+| `meta_analysis_agent` | §4 (statistic matched to summary: κ, I², SD vs IQR) |
+| `devils_advocate_agent` | §11 (conclusions that outrun results), §3 (hedges doing no work) |
+| `research_question_agent` / `socratic_mentor_agent` | §7 (a well-formed title names population, object and design — a useful test of whether a question is specified) |
 
-**Interaction with `writing_quality_check.md`:** that file's flagged-term table
-stays in force, with §6 here as its calibration layer — `comprehensive`,
-`robust` and `crucial` are ordinary usage in this literature and should not be
-flagged on sight, while `tapestry`, `testament` and `embark` are absent from it
-entirely.
-
-**Interaction with the claim-strength ladder:** none of these conventions may be
-used to move a claim up or down the ladder in
-`shared/references/claim_strength_ladder.md`. Rewriting "may be associated with"
-as "reduces" is a claim-strength move, not a style edit, and requires the
-author's authorization. Hedges the author placed deliberately are protected by
-`shared/references/protected_hedging_phrases.md`.
+**Boundary:** §13 is a set of prompts for closer reading, not a scoring
+instrument and not a risk-of-bias tool. Reporting style is evidence about
+reporting, not about study conduct; the risk-of-bias instruments remain the
+authority on conduct.
 
 **Epistemic status:** descriptive conventions measured over one defined corpus of
 health and digital-health journals, not a universal rule set. Sub-fields differ,

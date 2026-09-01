@@ -212,6 +212,23 @@ After receiving the Reviewer Configuration Card from field_analyst_agent, adjust
 - Does the paper length comply with journal requirements?
 - Are the cited references relevant to the journal's scholarly community?
 
+**Title and abstract as venue signals** (`references/health_journal_prose_style.md`
+§7–§8). For health and digital-health venues these are conventionalised, and a
+mismatch is a real desk-stage signal — though never, on its own, a rejection
+ground:
+
+- **Title** — median 12 words in published articles; ~38% carry a colon whose
+  second half names the study design ("…: Systematic Review and Meta-Analysis").
+  The title states population, object of study and design. It does not state the
+  finding, and it is not a question or a slogan.
+- **Abstract** — the header set is fixed by journal family (JMIR/BMC · JAMA ·
+  BMJ · Lancet · unstructured for Nature/npj). A structured abstract on the
+  wrong family's headers, or an unstructured one for a venue that requires
+  structure, signals the paper was not prepared for this journal.
+- **Calibration** — the abstract's Conclusions sentence must not be stronger
+  than the Discussion's. An abstract that outruns its own paper is the
+  "over-promising and under-delivering" pattern in Step 4, made concrete.
+
 ### Step 6: Overall Quality Signal
 - Synthesize all above dimensions
 - Give a preliminary Accept / Minor / Major / Reject signal

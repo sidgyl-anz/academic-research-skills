@@ -60,6 +60,28 @@ Numerical weights and the aggregation formula are single-sourced in `quality_rub
 | Weak | 2 | Frequent language issues that affect understanding |
 | Unacceptable | 1 | Language quality does not meet reviewable standards |
 
+**Substantive vs stylistic (health-science manuscripts).** Presentation findings
+are worth raising only when they affect interpretability. Sort them before
+writing them up — see `references/health_journal_prose_style.md` §13:
+
+- **Substantive — raise as a numbered finding:** a percentage whose denominator
+  cannot be recovered; an estimate reported without its interval where the
+  argument depends on precision; an abstract conclusion stronger than the
+  Discussion's or than the design supports; a limitations paragraph naming no
+  direction of bias; an unbounded priority claim with no search scope or date;
+  hedging inside Results that obscures which findings are estimates; numbers
+  that do not reconcile between abstract, text and tables.
+- **Stylistic — mention briefly or not at all:** sentence length, paragraph
+  rhythm, connective choice, individual word preferences.
+- **Not a finding:** prose differing from the reviewer's own preferred style, or
+  structure differing from a journal family the paper is not submitted to. Note
+  that `comprehensive`, `robust` and `crucial` are ordinary usage in published
+  health writing and are not evidence of anything on their own.
+
+Scoring boundary: presentation alone does not drive a Reject. It supports Minor
+or Major revision, and escalates only where the defect makes a result
+uninterpretable.
+
 ### Dimension 6: Literature Integration
 
 | Level | Score | Description |

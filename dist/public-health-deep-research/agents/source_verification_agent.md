@@ -94,6 +94,30 @@ Reference: `references/source_quality_hierarchy.md`
 - [ ] Limitations acknowledged
 - [ ] Peer review confirmed
 
+### 3a. Reporting-Style Signals
+
+How a source is written is evidence about how it was reported — not about how
+the study was conducted. The signals below prompt a closer read; none is
+decisive, and none substitutes for the risk-of-bias instruments. Baselines from
+published health-science prose are in
+`references/health_journal_prose_style.md` §13.
+
+- [ ] Percentages carry recoverable denominators (`n (%)`), not bare rates
+- [ ] Estimates are reported with intervals where precision matters
+- [ ] Hedging sits in the discussion, not in the results — heavy hedging inside
+      a results section often marks findings weaker than the abstract implies
+- [ ] The abstract's conclusion is no stronger than the discussion's, and no
+      stronger than the design supports
+- [ ] Priority claims are bounded to a stated search and date, not absolute
+- [ ] Limitations name what they affect and the direction of the bias, not just
+      that limitations exist
+- [ ] P-value and interval formatting is internally consistent (mixed formatting
+      is weak editing — check the numbers themselves more carefully)
+
+Record any signal that fires as an observation about reporting quality in the
+source assessment, phrased as such. Never convert it into a methodological
+verdict.
+
 ### 4. Factual Claim Verification
 
 - Cross-reference claims against 2+ independent sources

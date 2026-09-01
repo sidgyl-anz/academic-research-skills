@@ -1,22 +1,23 @@
-# Health Journal Prose Style — Corpus-Derived Writing Conventions
+# Health Journal Prose Style — Corpus-Derived Review Conventions
 
-Reference for the review panel on how published prose in the health, medical and
-digital-health literature actually reads, sentence by sentence. In this review
-skill it is a **presentation-quality yardstick**, not a drafting guide: it lets
-"the writing is weak" become a specific, evidence-anchored comment, and — via §6
-— stops the panel from mis-flagging ordinary field usage (`comprehensive`,
-`robust`, `crucial`) as an "AI tell". A reviewer never rewrites the manuscript;
-the prescriptive house style a writer follows lives in the companion
-`public-health-paper-writer` skill.
+Reference for the **presentation and clarity** dimension of review, and for the
+register of the review report itself.
 
-The conventions below are measured from a corpus of published articles, not
-asserted from taste. Where this file and a general style guide differ for a
-health-science manuscript, this file governs; where the target journal's author
-instructions differ from either, the journal governs.
+Two uses:
 
-This is a writing aid. It shapes how the author's study is *expressed* — it
-never changes what the study found, and it never strengthens a claim to make a
-sentence land better.
+1. **Assessing the manuscript's writing.** Presentation findings are only worth
+   raising when they are specific and defensible. The conventions below are
+   measured from published health-science articles, so a reviewer can say "the
+   Results section hedges where the Discussion should" or "percentages are
+   reported without denominators" and point at what the literature does —
+   instead of registering a preference.
+2. **Writing the review.** Review reports are read by authors and editors under
+   time pressure. The same conventions — claim first, specific hedges, numbers
+   with denominators, sparing connectives — make a review usable.
+
+This is a reviewer's aid, not a rewriting instruction. Reviewers identify where
+the manuscript departs from the conventions and cite the location; they do not
+rewrite the author's prose.
 ---
 
 ## 0. Where these conventions come from
@@ -352,36 +353,82 @@ Rules:
 
 ---
 
-## 13. How the review panel uses this file
+## 13. Turning style observations into legitimate findings
 
-| Agent | Primary sections |
+Presentation findings carry weight only when they affect interpretability. Sort
+them before writing them up.
+
+**Substantive — raise as a numbered finding:**
+
+- A percentage whose denominator cannot be recovered from the text or tables
+  (the corpus norm is `n (%)` with the base explicit).
+- An estimate reported without its interval, where the argument depends on
+  precision.
+- Inconsistent P-value or CI formatting *combined with* numbers that do not
+  reconcile between abstract, text and tables.
+- An abstract Conclusions sentence stronger than the Discussion's, or than the
+  design supports.
+- A limitations paragraph that names no direction of bias.
+- An unbounded priority claim ("the first study to…") with no search date or
+  scope attached.
+- Hedging inside Results that conceals which findings are actually estimates.
+
+**Stylistic — mention briefly, or not at all:**
+
+- Sentence length, paragraph rhythm, connective choice, word preferences.
+- Flagged vocabulary in isolation. Note §6: `comprehensive`, `robust` and
+  `crucial` are ordinary usage in this literature and must not be raised as
+  evidence of anything on their own.
+
+**Not a finding at all:** a manuscript's prose being unlike the reviewer's own
+preferred style, or its structure differing from a journal family it is not
+submitted to.
+
+**Finding template:** *"Results, p. 7: '97% of cases were correctly classified'
+— the denominator is not recoverable here or in Table 2. Report as n (%) with
+the base, as the reported subgroup analyses appear to use different
+denominators."*
+
+---
+
+## 14. The review report's own register
+
+- **Claim first.** Each finding opens with what is wrong, then the location,
+  then why it matters. No preamble.
+- **Locate everything.** Section and page or line, so the author can act without
+  hunting.
+- **Hedge like the literature, not like a critic.** "The estimate may not
+  transfer to community settings because the sample was single-centre" is
+  usable; "the authors should perhaps consider that this might possibly be
+  limited" is not.
+- **Carry the numbers.** When a reviewer disputes a figure, the review states the
+  figure, its source in the manuscript, and the discrepancy.
+- **Separate severity from tone.** A major finding is major because of what it
+  affects, not because it is phrased sharply. §1's rhythm applies: the sentence
+  carrying the finding should be short.
+- **No rewriting.** Suggested wording appears only when the author asked for it,
+  or when a single phrase is the finding itself.
+
+---
+
+## 15. How this reference is used by each reviewer
+
+| Reviewer | Primary sections |
 |---|---|
-| `methodology_reviewer_agent` | §4 (numbers in prose — `n (%)`, denominators, CI/P formatting consistency), §3 (association-vs-causation vocabulary) |
-| `domain_reviewer_agent` | §2 register by section, §9 Discussion architecture — whether the manuscript follows the field's conventions |
-| `perspective_reviewer_agent` | §11 conclusions — whether the closing claim exceeds the results |
-| `eic_agent` (Journal-Fit) | §7 title, §8 abstract header set and length budget for the target venue |
-| `devils_advocate_reviewer_agent` | §3 (a hedge that names no reason, a causal verb the design cannot support), §11 (over-strong conclusion) |
-| `editorial_synthesizer_agent` | §12 self-check as the presentation-quality lens when weighing "clarity/writing" findings |
+| `field_analyst_agent` | §7, §8 (does the title/abstract match the venue family's conventions?), §13 sorting |
+| `eic_agent` (Journal-Fit) | §7, §8 (title and abstract as venue signals), §11 (conclusion calibrated to the venue's standard) |
+| `methodology_reviewer_agent` | §4 (numbers, denominators, intervals, statistic-to-summary match), §2 (hedging misplaced into Results), §13 |
+| `domain_reviewer_agent` | §3 (hedges that name a reason vs boilerplate), §9 Comparison With Prior Work |
+| `perspective_reviewer_agent` | §10 (limitations that name direction of bias, including for whom the finding may not hold) |
+| `devils_advocate_reviewer_agent` | §11 (conclusions outrunning results), §8 (abstract stronger than body) |
+| `editorial_synthesizer_agent` | §13 (do not let stylistic observations inflate a decision tier), §14 (register of the decision letter) |
 
-**Do not** turn these conventions into a scoring rubric or a finding quota: they
-are a yardstick for making a presentation comment specific, and §6 is a guard
-against false "AI-tell" flags. A prose observation never overrides a substantive
-methodological or validity finding.
-
-**Interaction with `writing_quality_check.md`:** that file's flagged-term table
-stays in force, with §6 here as its calibration layer — `comprehensive`,
-`robust` and `crucial` are ordinary usage in this literature and should not be
-flagged on sight, while `tapestry`, `testament` and `embark` are absent from it
-entirely.
-
-**Interaction with the claim-strength ladder:** none of these conventions may be
-used to move a claim up or down the ladder in
-`shared/references/claim_strength_ladder.md`. Rewriting "may be associated with"
-as "reduces" is a claim-strength move, not a style edit, and requires the
-author's authorization. Hedges the author placed deliberately are protected by
-`shared/references/protected_hedging_phrases.md`.
+**Severity boundary:** presentation findings alone do not drive a Reject. They
+support Minor or Major revision, and they escalate only when the presentation
+defect makes a result uninterpretable — an unrecoverable denominator on the
+primary outcome, or an abstract conclusion the data do not support.
 
 **Epistemic status:** descriptive conventions measured over one defined corpus of
 health and digital-health journals, not a universal rule set. Sub-fields differ,
 journals differ, and author instructions always govern. The frequencies are
-calibration for judgment, never targets to hit.
+calibration for judgment, never thresholds a manuscript can fail.

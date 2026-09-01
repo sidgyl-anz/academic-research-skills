@@ -1,3 +1,22 @@
+## [3.3.0-ph1] - 2026-08-20
+
+### Added
+
+- **Health-journal prose style reference** (`references/health_journal_prose_style.md`) — writing conventions measured over a 69-paper, ~755,000-word corpus of published health and digital-health journal articles. Governs over the general style guide for health-science manuscripts; the target journal's author instructions govern over both.
+
+### Changed
+
+- `draft_writer_agent` — Writing Style Guidelines gain a **register-shifts-by-section** table (Methods procedural and unhedged; Results states findings about the data; Discussion carries the hedging at over 5× the Results rate) and a hedging-discipline subsection. Holding one flat "academic tone" across a paper is now named as the primary failure mode. Claim-strength boundary made explicit.
+- `structure_architect_agent` — new Step 2a: the Discussion skeleton (Principal Findings → Comparison With Prior Work → Limitations → Future Directions → Conclusions) with word counts allocated to those slots.
+- `abstract_bilingual_agent` — venue-specific abstract header sets (JMIR/BMC · JAMA · BMJ · Lancet · Nature/npj) with corpus length figures; abstract conclusion may not exceed the Discussion's.
+- `references/writing_quality_check.md` — new **calibration** layer: measured corpus rates per flagged term, banding them from absent to ordinary. `comprehensive` (45/100k), `robust` (27/100k) and `crucial` (12/100k) are ordinary usage in health writing and are no longer flagged on sight; clustering, not any single word, is the tell. Em-dash and burstiness rules gain measured baselines.
+- `references/abstract_writing_guide.md` — venue header-set table and corpus length/density figures.
+- `references/academic_writing_style.md` — Medicine/Health register block corrected: voice shifts by section rather than "passive for methods, active for findings".
+- `references/public_health_writing_standards.md` — new §5a Prose conventions of the target literature.
+- `SKILL.md` — feature list, reference pointer, and three new anti-patterns (flat voice across the paper; boilerplate hedging; percentages without denominators).
+
+---
+
 # Version History
 
 | Version | Date | Changes |

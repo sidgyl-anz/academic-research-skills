@@ -2,7 +2,7 @@
 name: public-health-paper-writer
 description: "Write PUBLIC HEALTH manuscripts (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics) with a 12-agent pipeline. Structures the paper against the applicable EQUATOR reporting guideline (STROBE, CONSORT, PRISMA, SPIRIT, TRIPOD, CHEERS, RECORD), keeps causal language calibrated to the study design, and produces a structured abstract, equity/ethics reporting, and clean citations. Applies a house writing style by default (clarity, plain-academic wording, preserved numbers/terminology), with a dedicated style-polish copyedit mode. Modes: full, plan, outline, revision, revision-coach, abstract, lit-review, format-convert, citation-check, disclosure, rebuttal-audit, style-polish. Triggers: write paper, write my public health paper, draft methods/results, structured abstract, guide my paper, revise my paper, polish for clarity, copyedit to the style guide, 寫論文, 公共衛生論文, 논문 작성."
 metadata:
-  version: "3.2.0-ph6"
+  version: "3.3.0-ph2"
   last_updated: "2026-08-12"
   status: active
   data_access_level: redacted
@@ -514,10 +514,13 @@ Explicit prohibitions to prevent common failure modes:
 
 | # | Anti-Pattern | Why It Fails | Correct Behavior |
 |---|-------------|-------------|-----------------|
-| 1 | **AI-typical overused terms** | "delve into", "crucial", "it is important to note" = instant AI detection | Use discipline-specific vocabulary; see `references/writing_quality_check.md` |
+| 1 | **AI-typical overused terms** | "delve into", "tapestry", "it is important to note" = instant AI detection | Use discipline-specific vocabulary; see `references/writing_quality_check.md`, calibrated against published usage in `references/health_journal_prose_style.md` §6 (`crucial`, `robust` and `comprehensive` are ordinary in health writing and must not be flagged on sight) |
 | 2 | **Em dash abuse** | More than 2 em dashes per page signals AI writing | Use parentheses, commas, or restructure the sentence |
 | 3 | **Throat-clearing openers** | "In this section, we will discuss..." adds no information | Start with the claim or finding directly |
-| 4 | **Uniform paragraph lengths** | Every paragraph is 4-5 sentences = monotonous AI rhythm | Vary paragraph length naturally (2-8 sentences) |
+| 4 | **Uniform paragraph lengths** | Every paragraph is 4-5 sentences = monotonous AI rhythm | Vary paragraph length naturally (2-8 sentences); published health prose runs a median 75-word paragraph and a median 17-word sentence with 43% under 15 words |
+| 4a | **One flat voice across the paper** | Real health-science articles shift register by section — Methods procedural and unhedged, Results stating findings about the data, Discussion carrying the hedges | Follow the section register table in `references/health_journal_prose_style.md` §2 |
+| 4b | **Boilerplate hedging** | "Further research is needed" / "should be interpreted with caution" appear ~7 times per 635,000 words of published health prose — they read as filler | Hedge by naming the specific feature of this study that creates the uncertainty, and the direction of the likely bias |
+| 4c | **Percentages without denominators** | "97% of cases" cannot be checked or compared | Report `n (%)` with the base recoverable, and attach the interval to every estimate; real sentence models in `references/health_journal_prose_examples.md` §4 |
 | 5 | **⚠️ IRON RULE: Fabricated citations** | Inventing plausible-sounding references that don't exist | Every citation must be verified via DOI or WebSearch; see `academic-pipeline/agents/integrity_verification_agent.md` |
 | 6 | **Sycophantic revision** | Accepting all reviewer feedback without critical evaluation | Use REVIEWER_DISAGREE status when reviewer is wrong; justify with evidence |
 | 7 | **Scope creep during revision** | Adding unrequested sections/analyses to "improve" the paper | Revision addresses reviewer concerns only; new content requires explicit user approval |
@@ -592,7 +595,7 @@ When `ARS_MODEL_TIERING` is set, the dispatching session routes this skill's age
 
 | Item | Content |
 |------|---------|
-| Skill Version | 3.2.0-ph6 |
+| Skill Version | 3.3.0-ph2 |
 | Last Updated | 2026-07-11 |
 | Maintainer | Cheng-I Wu |
 | Dependent Skills | deep-research v1.0+ (upstream), academic-paper-reviewer v1.0+ (downstream) |

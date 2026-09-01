@@ -69,10 +69,17 @@ Example: "The intervention improved student metacognitive awareness, as evidence
 ### Medicine / Health
 ```
 Register: Formal, evidence-hierarchy conscious, clinical precision
-Voice: Passive for methods, active for findings
+Voice: Shifts by section — Methods mixes first-person and passive (passive ~2:1);
+       Results states findings about the data with minimal first person;
+       Discussion returns to first person and carries the hedging
 Terminology: Clinical terms, diagnostic criteria, statistical reporting
+Numbers: counts with denominators, percentage in parentheses, interval attached
 Example: "Patients receiving the intervention showed a 40% reduction in readmission rates (RR = 0.60, 95% CI [0.45, 0.80], p = .001)."
 ```
+
+> For health, medical and digital-health manuscripts, the corpus-derived
+> conventions in `health_journal_prose_style.md` are more specific than this
+> block and govern where they differ.
 
 ## Hedging and Strength Language
 

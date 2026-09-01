@@ -199,6 +199,24 @@ Write the integrated narrative that:
 - Connects to theoretical framework
 - Sets up the discussion section of the report
 
+**Prose conventions** (`references/health_journal_prose_style.md`): a synthesis
+reads as evidence rather than commentary when it follows the register of the
+literature it summarizes.
+
+- **Carry the numbers through.** Every proportion keeps a recoverable
+  denominator and every estimate keeps its interval — `137 (99.3%)`, not "most
+  studies". Where the source reported a bare percentage, say so rather than
+  reproducing it as though the base were known (§4).
+- **Hedge with a named reason.** Attach the uncertainty to the feature of the
+  evidence that creates it — the design, the sample, the comparator — not to a
+  portable formula (§3).
+- **Contrast with `However`.** It does the contrastive work in this literature
+  at roughly 3.6× `Furthermore,`; `Importantly,` and `Notably,` are near-absent
+  and should be cut (§5).
+- **Claim first, then the evidence.** Paragraphs run 3–6 sentences with the
+  claim in the opening sentence; findings land in short sentences, qualification
+  in longer ones (§1).
+
 ## Output Format
 
 ```markdown

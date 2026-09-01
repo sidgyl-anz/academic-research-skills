@@ -188,6 +188,12 @@ considers:
 | `devils_advocate_reviewer_agent` | §2 (causal over-reach — the strongest counter-argument is usually "this is association dressed as causation"), §3 (generalizability), §5 (multiplicity/underpowering) |
 | `editorial_synthesizer_agent` | Weighs guideline-adherence and causal-calibration findings as core, not cosmetic |
 
+**Companion reference:** `health_journal_prose_style.md` covers the presentation
+layer — how published health-science prose actually reads, which presentation
+defects are substantive findings, and the register of the review report itself.
+Guideline adherence (this file) decides what each section must contain; that
+file decides whether what is there can be interpreted.
+
 **Epistemic status:** This is a curated reviewer aid, not an exhaustive or
 authoritative registry. Reporting guidelines are updated by their maintaining
 bodies (EQUATOR Network); when a reviewer knows a newer version applies, that

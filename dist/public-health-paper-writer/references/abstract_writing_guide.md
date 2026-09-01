@@ -9,6 +9,22 @@ Contains explicit labeled sections. Required by many journals in social sciences
 
 **Sections**: Background, Purpose/Objective, Method, Results/Findings, Conclusion/Implications
 
+**Health/medical venues use fixed, family-specific header sets** — copy the
+target family's exactly rather than a generic set (`health_journal_prose_style.md` §8):
+
+| Family | Header set |
+|---|---|
+| JMIR / BMC | Background · Objective · Methods · Results · Conclusions |
+| JAMA family | Importance · Objective · Design, Setting, and Participants · Main Outcomes and Measures · Results · Conclusions and Relevance |
+| BMJ | Objective · Design · Setting · Participants · Main outcome measures · Results · Conclusions |
+| Lancet family | Background · Methods · Findings · Interpretation · Funding |
+| Nature / npj | Unstructured single paragraph |
+
+Structured abstracts in this literature run **≈350–400 words** (measured median
+389), are denser than the body (mean sentence ~26 words), and carry no claim
+stronger than the Discussion's. Every number in the abstract must reappear in
+the body.
+
 ### Unstructured Abstract
 A single flowing paragraph without labels. Common in humanities and some social sciences.
 

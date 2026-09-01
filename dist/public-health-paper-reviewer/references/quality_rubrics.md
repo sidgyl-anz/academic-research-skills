@@ -77,6 +77,15 @@ All dimensions scored 0-100. Final weighted score determines editorial decision.
 | 45-59 | Weak | Below journal standards; frequent verbose/unclear passages; terminology inconsistent; multiple grammar issues |
 | < 45 | Insufficient | Unacceptable writing quality; incomprehensible passages; severe grammar problems; not suitable for peer review |
 
+**Anchoring for health-science manuscripts** (`references/health_journal_prose_style.md`):
+score this dimension on *interpretability*, not on taste. Recoverable
+denominators, estimates carried with their intervals, consistent P-value and CI
+formatting, hedging placed in the Discussion rather than the Results, and
+limitations that name the direction of bias are the observable markers. A
+manuscript whose prose is plain but whose numbers are fully recoverable scores
+higher here than a fluent one whose percentages have no base. Sentence rhythm
+and word preference do not move this score on their own.
+
 ## Optional Dimensions (reviewer-specific)
 
 ### Literature Integration (R2 Domain Expert focus)
