@@ -2,7 +2,7 @@
 name: public-health-paper-reviewer
 description: "Multi-perspective peer review of PUBLIC HEALTH manuscripts (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics). Five independent reviewers (Journal-Fit + methodology + domain + cross-disciplinary + Devil's Advocate) check reporting-guideline adherence (STROBE, CONSORT, PRISMA, SPIRIT, TRIPOD, CHEERS, RECORD), causal-inference validity, and health-equity dimensions, then produce an Editorial Decision + Revision Roadmap. Full, re-review, quick, methodology-focus, guided, and calibration modes. Triggers on: review paper, peer review, manuscript review, referee report, review my public health paper, epidemiology review, STROBE/PRISMA/CONSORT check, critique paper, simulate review, calibrate reviewer, 審查論文, 論文審查, 同儕審查, 幫我審這篇, 公共衛生論文審查, 논문 심사, 동료 심사, 모의 심사."
 metadata:
-  version: "1.10.0-ph4"
+  version: "1.10.0-ph5"
   last_updated: "2026-08-12"
   status: active
   data_access_level: verified_only
@@ -545,7 +545,7 @@ When `ARS_MODEL_TIERING` is set, the dispatching session routes this skill's age
 
 | Item | Content |
 |------|---------|
-| Skill Version | 1.10.0-ph4 |
+| Skill Version | 1.10.0-ph5 |
 | Last Updated | 2026-07-11 |
 | Maintainer | Cheng-I Wu |
 | Dependent Skills | academic-paper v1.0+ (upstream/downstream integration) |

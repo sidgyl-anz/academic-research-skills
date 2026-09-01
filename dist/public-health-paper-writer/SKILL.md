@@ -2,7 +2,7 @@
 name: public-health-paper-writer
 description: "Write PUBLIC HEALTH manuscripts (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics) with a 12-agent pipeline. Structures the paper against the applicable EQUATOR reporting guideline (STROBE, CONSORT, PRISMA, SPIRIT, TRIPOD, CHEERS, RECORD), keeps causal language calibrated to the study design, and produces a structured abstract, equity/ethics reporting, and clean citations. Applies a house writing style by default (clarity, plain-academic wording, preserved numbers/terminology), with a dedicated style-polish copyedit mode. Modes: full, plan, outline, revision, revision-coach, abstract, lit-review, format-convert, citation-check, disclosure, rebuttal-audit, style-polish. Triggers: write paper, write my public health paper, draft methods/results, structured abstract, guide my paper, revise my paper, polish for clarity, copyedit to the style guide, 寫論文, 公共衛生論文, 논문 작성."
 metadata:
-  version: "3.2.0-ph5"
+  version: "3.2.0-ph6"
   last_updated: "2026-08-12"
   status: active
   data_access_level: redacted
@@ -592,7 +592,7 @@ When `ARS_MODEL_TIERING` is set, the dispatching session routes this skill's age
 
 | Item | Content |
 |------|---------|
-| Skill Version | 3.2.0-ph5 |
+| Skill Version | 3.2.0-ph6 |
 | Last Updated | 2026-07-11 |
 | Maintainer | Cheng-I Wu |
 | Dependent Skills | deep-research v1.0+ (upstream), academic-paper-reviewer v1.0+ (downstream) |

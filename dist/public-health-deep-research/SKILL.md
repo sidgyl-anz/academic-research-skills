@@ -2,7 +2,7 @@
 name: public-health-deep-research
 description: "Universal deep-research team tuned for PUBLIC HEALTH (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics). 13-agent pipeline: PICO/PECO question framing, systematic literature search, source verification against real records, cross-source synthesis with causal-vs-association calibration, risk-of-bias appraisal (RoB2/ROBINS-I/Newcastle-Ottawa/QUADAS-2), meta-analysis, GRADE certainty, and PRISMA-ready systematic reviews. Modes: full research, quick brief, paper review, lit-review, fact-check, three-way scan, Socratic guided, systematic review + meta-analysis. Triggers on: research, deep research, public health research, literature review, systematic review, meta-analysis, PRISMA, evidence synthesis, fact-check a health claim, guide my research, 研究, 深度研究, 文獻回顧, 系統性回顧, 後設分析, 事實查核, 引導我的研究, 심층 연구, 문헌 조사, 체계적 문헌고찰, 메타분석."
 metadata:
-  version: "2.11.0-ph4"
+  version: "2.11.0-ph5"
   last_updated: "2026-08-12"
   status: active
   data_access_level: raw

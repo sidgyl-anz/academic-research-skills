@@ -12,12 +12,14 @@ contrast turns — **never the content or wording**. These are other authors'
 sentences about other studies; lifting a phrase into a new manuscript is
 plagiarism. Write your own sentence about your own study in the same shape.
 
-**Attribution & scope.** Each quotation is brief (one sentence), cited to its
-journal and DOI, reproduced for style illustration (fair-use commentary); minor
-OCR artefacts have been cleaned. Coverage is a curated sample from the reference
-corpus (JAMA, JAMA Network Open, BMJ, *Lancet Digital Health*, *Nature* /
-*Nature Medicine* / *npj Digital Medicine*, *World Psychiatry*, *Int. J. Nursing
-Studies*), not an exhaustive set. Where a target journal's author instructions
+**Source — the uploaded corpus only.** Every sentence below is a verbatim
+quotation drawn **exclusively from the papers in the uploaded reference corpus**
+(JAMA, JAMA Network Open, BMJ, *Lancet Digital Health*, *Nature* / *Nature
+Medicine* / *npj Digital Medicine*, *World Psychiatry*, *Int. J. Nursing
+Studies*). Nothing is invented, generated, or drawn from outside those papers.
+Each quotation is one sentence, cited to its journal and DOI, reproduced for
+style illustration (fair-use commentary), with minor OCR artefacts cleaned. It is
+a curated sample, not exhaustive. Where a target journal's author instructions
 differ, the journal governs; the claim-strength ladder and protected hedges
 always apply (a style edit never moves a claim's strength).
 
@@ -235,30 +237,8 @@ matches observational or heterogeneous evidence rather than mandating action.
 
 ---
 
-## 8. Putting it together — a short worked contrast
-
-Weak (generic, could be any paper):
-
-> "Our comprehensive analysis revealed that chatbots showed promising but
-> concerning results, and it is important to note that further research is
-> needed in this crucial area."
-
-Rewritten in the corpus register (your own numbers, your own study):
-
-> "Across the 12 studies, triage accuracy ranged from 41% to 88% (see Table 2).
-> Accuracy was lower for emergency presentations, however, where under-triage
-> could delay care. Because every study used vignettes rather than real patients,
-> these estimates may not transfer to live use. Future research should test these
-> tools with real patients before clinical deployment."
-
-**What changed:** the vague intensifiers ("comprehensive", "promising but
-concerning", "crucial", "further research is needed") are gone; the finding
-leads with a number and denominator; the contrast turns once on `however`; the
-hedge names the specific reason (vignettes, not real patients); and the
-recommendation is specific and tied to that limitation.
-
----
-
-**Epistemic status:** brief attributed quotations reproduced for style
-illustration. They model English *structure*, not content — write your own
-sentence about your own study.
+**Epistemic status:** every example above is a **verbatim sentence from the
+uploaded corpus** (cited to its journal and DOI) — nothing here is invented or
+paraphrased. They model English *structure*, not content: write your own
+sentence about your own study in the same shape. Lifting the wording itself is
+plagiarism.
