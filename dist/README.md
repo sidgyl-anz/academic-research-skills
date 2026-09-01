@@ -52,6 +52,22 @@ message. The three chain as a pipeline: **research → write → review → revi
   your materials per task. Each skill's `INSTALL.md` explains the optional
   Style-Calibration / exemplar / calibration-test-set paths.
 
+## Rebuilding these zips
+
+From the repository root, after editing any skill folder under `dist/`:
+
+```bash
+./build-skills.sh                 # rebuild all three skill zips (upload these)
+./build-skills.sh writer          # just one (deep-research | writer | reviewer)
+./build-skills.sh --bundle        # also build the combined bundle (NOT uploadable — see note above)
+```
+
+The script validates that each folder has a `SKILL.md`, excludes junk
+(`.DS_Store` / `__pycache__`), and packs each skill folder at the zip's top
+level (the layout Claude.ai expects). It uses `zip` when available and falls
+back to Python's `zipfile`, so it works on minimal images and Git Bash. The
+combined bundle is opt-in because Claude.ai rejects a zip containing other zips.
+
 ## Provenance & license
 
 Derived from **Academic Research Skills** by Cheng-I Wu
