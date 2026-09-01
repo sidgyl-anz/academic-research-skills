@@ -27,6 +27,12 @@ confounding / E-value), **measurement & generalizability** (§3), and
 survival assumptions, clustering/multilevel structure, multiplicity, missing
 data, calibration for prediction models). Watch terminology precision (§7).
 
+For presentation quality, use `references/health_journal_prose_style.md` §4 as
+the yardstick for numeric reporting: flag bare percentages with no recoverable
+denominator, estimates missing their CI, and inconsistent P-value/CI formatting.
+Do not mis-flag ordinary field usage (`comprehensive`, `robust`, `crucial`) as
+an AI tell (§6). A presentation comment never outranks a validity finding.
+
 ---
 
 ## Phase Boundary (v3.9.2)

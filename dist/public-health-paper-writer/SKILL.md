@@ -2,7 +2,7 @@
 name: public-health-paper-writer
 description: "Write PUBLIC HEALTH manuscripts (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics) with a 12-agent pipeline. Structures the paper against the applicable EQUATOR reporting guideline (STROBE, CONSORT, PRISMA, SPIRIT, TRIPOD, CHEERS, RECORD), keeps causal language calibrated to the study design, and produces a structured abstract, equity/ethics reporting, and clean citations. Applies a house writing style by default (clarity, plain-academic wording, preserved numbers/terminology), with a dedicated style-polish copyedit mode. Modes: full, plan, outline, revision, revision-coach, abstract, lit-review, format-convert, citation-check, disclosure, rebuttal-audit, style-polish. Triggers: write paper, write my public health paper, draft methods/results, structured abstract, guide my paper, revise my paper, polish for clarity, copyedit to the style guide, 寫論文, 公共衛生論文, 논문 작성."
 metadata:
-  version: "3.2.0-ph2"
+  version: "3.2.0-ph3"
   last_updated: "2026-08-12"
   status: active
   data_access_level: redacted
@@ -76,6 +76,7 @@ A general-purpose academic paper writing tool — 12-agent pipeline covering all
 - **Style Calibration** (intake Step 10, optional) — Provide 3+ past papers and the pipeline learns your writing voice (sentence rhythm, vocabulary preferences, citation integration style). Applied as a soft guide during drafting; discipline conventions always take priority. See `shared/style_calibration_protocol.md`.
 - **Writing Quality Check** (`references/writing_quality_check.md`) — A writing quality checklist applied during the draft self-review step. Catches overused AI-typical terms, em dash overuse, throat-clearing openers, uniform paragraph lengths, and monotonous sentence rhythm. These are good writing rules, not detection evasion.
 - **House Writing Style (this build)** (`references/writing_style_guide.md`) — A unified style guide applied **by default** during drafting and revision: one idea per sentence, direct plain-academic wording, an explicit central contrast for the first-time reader, preserved methodological distinctions and exact numbers, and section rules for Results/Discussion/Abstract. Also available as the standalone `style-polish` mode (wording-only copyedit). See the Operational Modes table.
+- **Corpus Prose Calibration (this build)** (`references/health_journal_prose_style.md`) — Writing conventions measured from ~69 full-text top-journal health articles (JAMA/BMJ/Lancet/Nature Medicine/npj/JMIR): sentence rhythm (~17–20-word median), register by section, how the literature actually hedges (name the reason), `n (%)` numbers with recoverable denominators, `However` over `Importantly,`/`Notably,`, structured-abstract header sets, and Discussion architecture. Calibrates the house style against the published record; frequencies are guidance, not targets.
 
 > **Routing discipline (v3.9.2):** see `.claude/CLAUDE.md` "Routing Discipline (v3.9.2)" + `shared/references/intent_clarification_protocol.md` for cross-skill routing rules. This skill assumes routing has already settled — ambiguous cross-phase materials should have been clarified upstream.
 
@@ -486,6 +487,7 @@ See `agents/intake_agent.md` for the complete field definitions of the Phase 0 c
 
 **References** (in `references/`):
 - **House writing style (applied by default): `writing_style_guide`** — unified clarity/word-choice/section guidelines. One idea per sentence, direct wording, the "looked at" ban, protected technical terms, intensifier/vague-phrase avoid-lists, explicit central contrast, preserved methodological distinctions, and Results/Discussion/Abstract rules. Applied by `draft_writer_agent` (drafting + self-review), in `revision`, and as the whole of `style-polish` mode. Changes wording, never the science.
+- **Corpus prose calibration: `health_journal_prose_style`** — descriptive writing conventions measured from ~69 full-text JAMA / BMJ / Lancet / Nature-Medicine / npj / JMIR articles (sentence rhythm, register by section, hedging, connectives, numbers-in-prose, titles, abstracts, Discussion architecture, a pre-handoff self-check). Companion to `writing_style_guide` — the guide sets the rules, this file calibrates the frequencies. Frequencies are calibration for judgment, never quotas.
 - **Public health (this build's default): `public_health_writing_standards`** — EQUATOR reporting guidelines by design (STROBE/CONSORT/PRISMA/SPIRIT/STARD/TRIPOD/CHEERS/RECORD) driving the outline, IMRaD public-health flavor, causal-language calibration, structured abstract, equity/ethics/reporting-integrity, terminology precision. Loaded by all writing agents on PH manuscripts.
 - Citation: `apa7_extended_guide`, `apa7_chinese_citation_guide`, `citation_format_switcher`
 - Writing: `academic_writing_style`, `writing_quality_check`, `writing_judgment_framework`
@@ -589,7 +591,7 @@ When `ARS_MODEL_TIERING` is set, the dispatching session routes this skill's age
 
 | Item | Content |
 |------|---------|
-| Skill Version | 3.2.0-ph2 |
+| Skill Version | 3.2.0-ph3 |
 | Last Updated | 2026-07-11 |
 | Maintainer | Cheng-I Wu |
 | Dependent Skills | deep-research v1.0+ (upstream), academic-paper-reviewer v1.0+ (downstream) |

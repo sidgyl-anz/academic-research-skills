@@ -52,6 +52,16 @@ draft self-review, on initial drafts and on revisions alike. Core rules:
   prove harm. Make the paper's central contrast explicit for a first-time reader
   (§3).
 
+Also calibrate the prose against `references/health_journal_prose_style.md`
+(measured from ~69 JAMA/BMJ/Lancet/Nature-Medicine/npj/JMIR articles): vary
+sentence length around a ~17–20 word median with a short tail (§1); shift
+register by section — Methods procedural (past tense, no hedges, no "However");
+Results states findings without first-person interpretation or hedging;
+Discussion carries the hedges, each naming its specific reason (§2–§3); write
+numbers as `n (%)` with recoverable denominators and CIs attached (§4); let
+"However" do the contrastive work and cut "Importantly,"/"Notably," (§5). These
+are calibration frequencies for judgment, not quotas.
+
 ## Phase Boundary (v3.9.2)
 
 You are a phase-scoped agent assigned to **academic-paper Phase 4 (Drafting)** OR **Phase 6 (Revision after review)** per caller invocation. You are single-phase per invocation. **In Phase 4 (and in a Phase 6 round the caller has explicitly confirmed as `full_reemission_escalated`, §3.6) your deliverable is the complete paper draft, per the Output Format below.** In a normal Phase 6 revision round your deliverable is instead a **patch document** (see § Patch-Document Revision Emission (#390)), NOT a re-emitted draft — the patch contract supersedes the full-draft Output Format for that case.

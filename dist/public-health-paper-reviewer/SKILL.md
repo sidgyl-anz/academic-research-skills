@@ -2,7 +2,7 @@
 name: public-health-paper-reviewer
 description: "Multi-perspective peer review of PUBLIC HEALTH manuscripts (epidemiology, health policy/services, global/community health, environmental & occupational health, implementation science, health economics). Five independent reviewers (Journal-Fit + methodology + domain + cross-disciplinary + Devil's Advocate) check reporting-guideline adherence (STROBE, CONSORT, PRISMA, SPIRIT, TRIPOD, CHEERS, RECORD), causal-inference validity, and health-equity dimensions, then produce an Editorial Decision + Revision Roadmap. Full, re-review, quick, methodology-focus, guided, and calibration modes. Triggers on: review paper, peer review, manuscript review, referee report, review my public health paper, epidemiology review, STROBE/PRISMA/CONSORT check, critique paper, simulate review, calibrate reviewer, 審查論文, 論文審查, 同儕審查, 幫我審這篇, 公共衛生論文審查, 논문 심사, 동료 심사, 모의 심사."
 metadata:
-  version: "1.10.0-ph1"
+  version: "1.10.0-ph2"
   last_updated: "2026-08-12"
   status: active
   data_access_level: verified_only
@@ -434,6 +434,7 @@ pointer; a changed target starts a new, explicitly non-comparable review id.
 | Reference | Purpose | Used By |
 |-----------|---------|---------|
 | `references/public_health_review_standards.md` | **Public-health domain default:** EQUATOR reporting guidelines by design (STROBE/CONSORT/PRISMA/SPIRIT/STARD/TRIPOD/CHEERS/RECORD), causal-inference & confounding checks, equity/ethics dimensions, PH statistics red flags, venue-fit tiers, terminology precision | all reviewers (PH default) |
+| `references/health_journal_prose_style.md` | **Presentation-quality yardstick:** writing conventions measured from ~69 top-journal health articles (JAMA/BMJ/Lancet/Nature Medicine/npj/JMIR) — sentence rhythm, register by section, hedging, `n (%)` numbers, connectives, abstracts, Discussion architecture. Makes "the writing is weak" specific; §6 guards against mis-flagging ordinary field usage as an AI tell | all reviewers (presentation quality) |
 | `references/review_criteria_framework.md` | Structured review criteria framework (differentiated by paper type) | all reviewers |
 | `references/top_journals_by_field.md` | Top journal lists for major academic fields (Journal-Fit Reviewer role calibration) | field_analyst, eic |
 | `references/editorial_decision_standards.md` | Accept/Minor/Major/Reject criteria and decision matrix | eic, editorial_synthesizer |
@@ -543,7 +544,7 @@ When `ARS_MODEL_TIERING` is set, the dispatching session routes this skill's age
 
 | Item | Content |
 |------|---------|
-| Skill Version | 1.10.0 |
+| Skill Version | 1.10.0-ph2 |
 | Last Updated | 2026-07-11 |
 | Maintainer | Cheng-I Wu |
 | Dependent Skills | academic-paper v1.0+ (upstream/downstream integration) |

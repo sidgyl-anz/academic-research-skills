@@ -23,6 +23,11 @@ both absolute and relative effect measures + 95% CIs. Reserve a **structured
 abstract** slot (§4). Flag any guideline item the author has not supplied as a
 gap for the author, rather than outlining invented content.
 
+For the Discussion, use the recurring health-journal skeleton in
+`references/health_journal_prose_style.md` §9 — Principal Findings → Comparison
+with Prior Work → Strengths and Limitations → Future Directions → Conclusions —
+and budget the abstract to the venue's header set and ~350–400 words (§8).
+
 ## Phase Boundary (v3.9.2)
 
 You are a single-phase agent assigned to **academic-paper Phase 2 (Structure)**. Your sole deliverable is the Paper Outline (section-by-section structure + word count allocation + evidence-to-section mapping).

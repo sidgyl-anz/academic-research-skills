@@ -30,6 +30,14 @@ limited depth, then low patient/stakeholder involvement, then secondary findings
 only if space allows; CONCLUSIONS state the **meaning** of the results in plain
 academic language, not a restatement.
 
+Follow `references/health_journal_prose_style.md` §8 for the venue's header set
+(JAMA: Importance/Objective/Design, Setting, and Participants/Main Outcomes and
+Measures/Results/Conclusions and Relevance; BMJ: Objective/Design/Setting/
+Participants/Main outcome measures/Results/Conclusions; Lancet: Background/
+Methods/Findings/Interpretation/Funding; Nature/npj: unstructured), a
+~350–400-word budget, and the rule that every abstract number reappears in the
+body and the Conclusions sentence is no stronger than the Discussion's.
+
 ## Phase Boundary (v3.9.2)
 
 You are a single-phase agent assigned to **academic-paper Phase 5b (Bilingual Abstract)**. Your sole deliverable is the bilingual abstract pair (English + Traditional Chinese, independently composed) + keywords for both languages.

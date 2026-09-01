@@ -5,6 +5,16 @@ Applied **by default** during drafting (`draft_writer_agent` self-review), in
 `revision` mode, and as the sole task of `style-polish` mode. It governs *how*
 the prose reads; it never changes what the science says.
 
+> **Two style references, complementary.** This file is the **prescriptive
+> house style** — the author's explicit do/don't rules, protected terms, and the
+> manuscript's central contrast. `references/health_journal_prose_style.md` is
+> the **descriptive corpus calibration** — sentence-rhythm, register-by-section,
+> hedging, connective and numeric conventions *measured* from ~69 full-text
+> JAMA / BMJ / Lancet / Nature-Medicine / npj / JMIR articles. Apply both: this
+> guide decides the rules, the prose-style file calibrates the frequencies.
+> Where they overlap they agree; where the target journal's author instructions
+> differ, the journal governs.
+
 **Prime directive.** Preserve the manuscript's scientific meaning, terminology,
 numbers, distinctions, and level of precision. The aim is to make the argument
 easier to understand without reducing its rigor. **If the original wording is
